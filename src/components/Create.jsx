@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios';
 
 
-const endpoint = 'http://travel.webok.it/public/api/travel'
+const endpoint = 'https://travel.webok.it/public/api/travel'
 
 const Create = () => {
     const [isSaving, setIsSaving] = useState(false)

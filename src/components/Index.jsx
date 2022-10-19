@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2';
 
 
-const endpoint = 'http://travel.webok.it/public/api/travels'
+const endpoint = 'https://travel.webok.it/public/api/travels'
 
 const ShowTravels = () => {
     const [travels, setTravels] = useState([])
@@ -21,12 +21,12 @@ const ShowTravels = () => {
     }
     const searchHandleName = async (event) => {
         const key = event.target.value;
-        const response = await axios.get(`http://travel.webok.it/public/api/travels?name=${key}`);
+        const response = await axios.get(`https://travel.webok.it/public/api/travels?name=${key}`);
         setTravels(response.data.res.data)
     }
     const searchHandleAttendees = async (event) => {
         const key = event.target.value;
-        const response = await axios.get(`http://travel.webok.it/public/api/travels?attendees=${key}`);
+        const response = await axios.get(`https://travel.webok.it/public/api/travels?attendees=${key}`);
         if (response) {
             setTravels(response.data.res.data)
         }
@@ -43,7 +43,7 @@ const ShowTravels = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://travel.webok.it/public/api/travel/${id}`)
+                axios.delete(`https://travel.webok.it/public/api/travel/${id}`)
                     .then(function (response) {
                         Swal.fire({
                             icon: 'success',

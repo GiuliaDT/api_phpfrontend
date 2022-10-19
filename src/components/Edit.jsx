@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link, useParams } from "react-router-dom";
 import Swal from 'sweetalert2'
 
-const endpoint = 'http://travel.webok.it/public/api/travel/'
+const endpoint = 'https://travel.webok.it/public/api/travel/'
 
 const Edit = () => {
     const [isSaving, setIsSaving] = useState(false)
@@ -26,7 +26,7 @@ const Edit = () => {
             setreference(response.data.reference)
         }
         getTravelId()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+
     }, [])
 
 

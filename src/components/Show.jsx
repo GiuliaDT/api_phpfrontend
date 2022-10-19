@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios';
 
-const endpoint = 'http://travel.webok.it/public/api/travel'
+const endpoint = 'https://travel.webok.it/public/api/travel'
 
 const Show = () => {
     const [id, setId] = useState(useParams().id)
